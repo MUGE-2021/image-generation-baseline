@@ -1,0 +1,7 @@
+jsonlines==2.0.0
+requests==2.26.0
+attrs==21.2.0
+torch==1.7.1
+torchvision=0.8.2
+einops==0.3.2
+Pillow=8.4.0
