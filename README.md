@@ -26,6 +26,21 @@ text2image-baseline
             - ...
 ``` 
 
+Note for Xingzhi Cup: as the image data are provided by a directory of image files, to use this code users need to first transform the images to base64 strings by:
+```
+import base64
+from io import BytesIO
+from PIL import Image
+img = Image.open(BytesIO(base64.urlsafe_b64decode(image_base64)))
+```
+and save them to a tsv file as demonstrated below (id + ‘\t’+ base64):
+```
+8cf9ceb2a031d5a7fc88482b8a2b2fa6	iVBORw0KGgoAAAANSUhEUgAA...
+```
+Each line stands for an image. 
+
+
+
 ## Getting Started
 The model is a BART-like model with vqgan as a image tokenizer, please see `models/t2i_baseline.py` for detailed model structure.
 ### Training 
