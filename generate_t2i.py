@@ -120,7 +120,7 @@ def main(cfg: DictConfig):
     generator = task.build_generator(models, cfg.generation)
 
     if not os.path.exists(cfg.common_eval.results_path):
-        os.makedirs(cfg.commono_eval.results_path)
+        os.makedirs(cfg.common_eval.results_path)
 
     generate_results = []
     for sample in progress:
